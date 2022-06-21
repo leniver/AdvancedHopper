@@ -1,9 +1,14 @@
-# Fabric Example Mod
+# Advanced Hopper
 
-## Setup
+Adds a filterable hopper to Minecraft.<br/>
+With this mod you can filter multiple items. This mod has been inspired by [GoldenHopper](https://github.com/MrCrayfish/GoldenHopper)
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## Installation
 
-## License
+1. Install [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) if it is not installed.
+2. Download Golden Hoppers from [GitHub](https://github.com/leniver/AdvancedHopper/releases).
+3. Place the downloaded file in your `mods` folder.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Usage
+
+When this mod is installed, a iron hopper will be craftable using a hopper and redstone components. This iron hopper has an additional slots to specify a multiple items to filter; when those slots are filled, the hopper will only insert or extract items with the same type as the filter items.
