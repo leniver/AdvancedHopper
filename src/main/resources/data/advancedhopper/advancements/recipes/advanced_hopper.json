@@ -1,0 +1,43 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"advancedhopper:advanced_hopper"
+		]
+	},
+	"criteria": {
+		"has_hopper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"items": [
+						"minecraft:hopper"
+					]
+				}]
+			}
+		},
+		"has_redstone_comparator": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"items": [
+						"minecraft:comparator"
+					]
+				}]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "advancedhopper:advanced_hopper"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_hopper",
+			"has_redstone_comparator",
+			"has_the_recipe"
+		]
+	]
+}

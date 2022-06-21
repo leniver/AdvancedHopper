@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"rcr",
+		"rhr",
+		" p "
+	],
+	"key": {
+		"c": {
+			"item": "minecraft:comparator"
+		},
+		"h": {
+			"item": "minecraft:hopper"
+		},
+		"p": {
+			"item": "minecraft:repeater"
+		},
+		"r": {
+			"item": "minecraft:redstone"
+		}
+	},
+	"result": {
+		"item": "advancedhopper:advanced_hopper"
+	}
+}
