@@ -22,7 +22,7 @@ public class AdvancedHopperMod implements ModInitializer {
     public static final String MOD_ID = "advancedhopper";
 
     private static final Identifier ADVANCED_HOPPER_ID = new Identifier(MOD_ID, "advanced_hopper");
-    public static final Block ADVANCED_HOPPER = new AdvancedHopperBlock(FabricBlockSettings.copyOf(Blocks.HOPPER).mapColor(MapColor.GOLD));
+    public static final Block ADVANCED_HOPPER = new AdvancedHopperBlock(FabricBlockSettings.copyOf(Blocks.HOPPER).mapColor(MapColor.IRON_GRAY));
     public static final Item ADVANCED_HOPPER_ITEM = new BlockItem(ADVANCED_HOPPER, new Item.Settings().group(ItemGroup.REDSTONE));
 
     public static final BlockEntityType<AdvancedHopperBlockEntity> ADVANCED_HOPPER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder.create(AdvancedHopperBlockEntity::new, ADVANCED_HOPPER).build(null);
