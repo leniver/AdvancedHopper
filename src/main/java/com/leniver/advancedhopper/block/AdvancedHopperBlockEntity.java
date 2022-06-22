@@ -1,4 +1,4 @@
-package com.leniver.advancedhopper.block.entity;
+package com.leniver.advancedhopper.block;
 
 import java.util.stream.IntStream;
 
@@ -22,7 +22,7 @@ import net.minecraft.util.math.Direction;
 public class AdvancedHopperBlockEntity extends HopperBlockEntity implements SidedInventory {
     private static final int[] AVAILABLE_SLOTS = IntStream.range(0, 5).toArray();
 
-    private Inventory filterInventory = new SimpleInventory(27);
+    protected final Inventory filterInventory = new SimpleInventory(27);
 
     public AdvancedHopperBlockEntity(BlockPos pos, BlockState state) {
         super(pos, state);
@@ -37,7 +37,7 @@ public class AdvancedHopperBlockEntity extends HopperBlockEntity implements Side
 
         if (this.filterInventory.isEmpty()) return true;
 
-        ItemStack filter = null;
+        ItemStack filter;
         for (int i = 0; i < this.filterInventory.size(); i++) {
             filter = this.filterInventory.getStack(i);
             if (filter == null || filter.isEmpty()) continue;
@@ -64,7 +64,7 @@ public class AdvancedHopperBlockEntity extends HopperBlockEntity implements Side
 
     @Override
     protected Text getContainerName() {
-        return Text.translatable("container.advanced_hopper");
+        return Text.translatable("Advanced Hopper");
     }
 
     @Override
@@ -85,7 +85,7 @@ public class AdvancedHopperBlockEntity extends HopperBlockEntity implements Side
 
     @Override
     public BlockEntityType<?> getType() {
-        return AdvancedHopperMod.ADVANCED_HOPPER_BLOCK_ENTITY_TYPE;
+        return AdvancedHopperMod.getBlockEntityType();
     }
 
     @Override

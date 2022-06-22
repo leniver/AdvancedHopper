@@ -41,7 +41,7 @@ public class AdvancedHopperScreen extends HandledScreen<AdvancedHopperScreenHand
 
         // Render the filter slot placeholder
         Slot[] filterSlots = this.handler.getFilterSlots();
-        Slot filterSlot = null;
+        Slot filterSlot;
         for (int i = 0; i < filterSlots.length; i++) {
             filterSlot = filterSlots[i];
             if (!filterSlot.hasStack()) {

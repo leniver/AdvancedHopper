@@ -1,6 +1,6 @@
 package com.leniver.advancedhopper.mixin;
 
-import com.leniver.advancedhopper.block.entity.AdvancedHopperBlockEntity;
+import com.leniver.advancedhopper.block.AdvancedHopperBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -24,7 +24,7 @@ public class HopperBlockEntityMixin {
         if (stack.isEmpty()) return true;
         if ((Object) inventory instanceof AdvancedHopperBlockEntity) {
             AdvancedHopperBlockEntity AdvancedHopper = (AdvancedHopperBlockEntity) (Object) inventory;
-            if (!AdvancedHopper.isAcceptedByFilter(stack)) return true;
+            return !AdvancedHopper.isAcceptedByFilter(stack);
         }
 
         return false;

@@ -15,7 +15,7 @@ public class AdvancedHopperScreenHandler extends ScreenHandler {
     private final Slot[] filterSlots;
 
     public AdvancedHopperScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, Inventory filterInventory) {
-        super(AdvancedHopperMod.ADVANCED_HOPPER_SCREEN_HANDLER_TYPE, syncId);
+        super(AdvancedHopperMod.getScreenHandlerType(), syncId);
 
         // Inventory
         this.inventory = inventory;
@@ -48,7 +48,7 @@ public class AdvancedHopperScreenHandler extends ScreenHandler {
             }
         }
 
-        // Hotbar
+        // Player hot bar
         for (int column = 0; column < 9; column++) {
             this.addSlot(new Slot(playerInventory, column, column * 18 + 8, 167));
         }

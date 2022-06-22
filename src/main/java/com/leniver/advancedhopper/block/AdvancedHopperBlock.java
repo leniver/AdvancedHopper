@@ -1,7 +1,6 @@
 package com.leniver.advancedhopper.block;
 
 import com.leniver.advancedhopper.AdvancedHopperMod;
-import com.leniver.advancedhopper.block.entity.AdvancedHopperBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HopperBlock;
@@ -13,6 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class AdvancedHopperBlock extends HopperBlock {
+
     public AdvancedHopperBlock(Block.Settings settings) {
         super(settings);
     }
@@ -36,6 +36,6 @@ public class AdvancedHopperBlock extends HopperBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient() ? null : checkType(type, AdvancedHopperMod.ADVANCED_HOPPER_BLOCK_ENTITY_TYPE, HopperBlockEntity::serverTick);
+        return world.isClient() ? null : checkType(type, AdvancedHopperMod.getBlockEntityType(), HopperBlockEntity::serverTick);
     }
 }

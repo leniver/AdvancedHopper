@@ -23,7 +23,7 @@
       "com.leniver.advancedhopper.AdvancedHopperMod"
     ],
     "client": [
-      "com.leniver.advancedhopper.AdvancedHopperClientMod"
+      "com.leniver.advancedhopper.AdvancedHopperMod"
     ]
   },
   "mixins": [
@@ -37,6 +37,6 @@
     "java": ">=17"
   },
   "suggests": {
-    "another-mod": "*"
+    "polymer": "*"
   }
 }
